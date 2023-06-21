@@ -73,6 +73,10 @@ function createContext (width, height, options) {
   ctx._checkStencil = false
   ctx._stencilState = true
 
+  if (ctx.getSupportedExtensions().indexOf('ANGLE_instanced_arrays') < 0) {
+    ctx._extensions.ANGLE_instanced_arrays = null
+  }
+
   // Initialize texture units
   const numTextures = ctx.getParameter(ctx.MAX_COMBINED_TEXTURE_IMAGE_UNITS)
   ctx._textureUnits = new Array(numTextures)

@@ -11,7 +11,7 @@ WebGLRenderingContext* WebGLRenderingContext::CONTEXT_LIST_HEAD = NULL;
 
 const char* REQUIRED_EXTENSIONS[] = {
   "GL_OES_packed_depth_stencil",
-  "GL_ANGLE_instanced_arrays",
+  //"GL_ANGLE_instanced_arrays",
   NULL
 };
 

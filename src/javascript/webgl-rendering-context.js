@@ -1188,7 +1188,7 @@ class WebGLRenderingContext extends NativeWebGLRenderingContext {
 
   getSupportedExtensions () {
     const exts = [
-      'ANGLE_instanced_arrays',
+      // 'ANGLE_instanced_arrays',
       'STACKGL_resize_drawingbuffer',
       'STACKGL_destroy_context'
     ]
@@ -1225,6 +1225,10 @@ class WebGLRenderingContext extends NativeWebGLRenderingContext {
 
     if (supportedExts.indexOf('GL_OES_vertex_array_object') >= 0) {
       exts.push('OES_vertex_array_object')
+    }
+
+    if (supportedExts.indexOf('GL_ANGLE_instanced_arrays') >= 0) {
+      exts.push('ANGLE_instanced_arrays')
     }
 
     return exts
